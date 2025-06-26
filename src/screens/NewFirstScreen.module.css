@@ -378,6 +378,7 @@
     .mainTextContainer {
       width: 95%;
         padding: 10px;
+         margin:2% auto;
     }
     
     .mainText {
@@ -400,12 +401,12 @@
     }
     
     .imageContainer {
-        max-width: 80%;
+        max-width: 75%;
 margin: -1% auto;;
     }
     
     .buttonContainer {
-        max-width: 90%;
+        max-width: 85%;
     }
     
     .button {
