@@ -1,0 +1,248 @@
+/* WhoFits.module.css */
+.container {
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #f1f3f4 30%, #e8eaed 70%, #ffffff 100%);
+ flex-direction: column;
+  display: flex;
+  border-radius: 100px;
+  align-items: center;
+  justify-content: center;
+  font-family: HeeboR, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  direction: rtl;
+  position: relative;
+}
+
+.glassCard {
+  padding: 3.5rem;
+  max-width: 1200px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.mainTitle {
+  text-align: center;
+  font-size: 2.75rem;
+  font-weight: 600;
+  font-family: OpenSans, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #1a1a1a;
+  margin-bottom: 3rem;
+  letter-spacing: -0.5px;
+  position: relative;
+}
+
+
+
+.columnsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.column {
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(20px) saturate(200%);
+  -webkit-backdrop-filter: blur(20px) saturate(200%);
+  border-radius: 20px;
+  border: 1px solid rgba(153, 153, 153, 0.25);
+  padding: 2rem;
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    0 8px 32px rgba(0, 0, 0, 0.03),
+    0 1px 2px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.column:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    0 12px 40px rgba(0, 0, 0, 0.05),
+    0 2px 4px rgba(0, 0, 0, 0.03);
+  border-color: rgba(153, 153, 153, 0.35);
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: OpenSans, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #333333;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  position: relative;
+}
+
+.subtitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #999999, transparent);
+}
+
+.iconWrapper {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(153, 153, 153, 0.3);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    0 2px 8px rgba(0, 0, 0, 0.03);
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.iconWrapper:hover {
+  transform: translateY(-1px);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.pointsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.point {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(153, 153, 153, 0.15);
+  transition: all 0.2s ease;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  position: relative;
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    0 2px 8px rgba(0, 0, 0, 0.02);
+  direction: rtl;
+}
+
+.point:hover {
+  background: rgba(255, 255, 255, 0.35);
+  border-color: rgba(153, 153, 153, 0.25);
+  transform: translateX(-2px);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+.point .iconWrapper {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  color: #666666;
+}
+
+.pointText {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333333;
+  font-weight: 400;
+  font-family: HeeboR, -apple-system, BlinkMacSystemFont, sans-serif;
+  text-align: right;
+  flex: 1;
+  margin-right: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .glassCard {
+    padding: 2rem;
+    border-radius: 20px;
+  }
+  
+  .mainTitle {
+    font-size: 2.25rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .columnsContainer {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1.25rem;
+  }
+  
+  .pointText {
+    font-size: 0.95rem;
+  }
+  
+  .iconWrapper {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .point .iconWrapper {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .glassCard {
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+  
+  .mainTitle {
+    font-size: 1.875rem;
+  }
+  
+  .column {
+    padding: 1.5rem;
+  }
+  
+  .point {
+    padding: 0.875rem;
+  }
+  
+  .iconWrapper {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .point .iconWrapper {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .icon {
+    width: 14px;
+    height: 14px;
+  }
+}

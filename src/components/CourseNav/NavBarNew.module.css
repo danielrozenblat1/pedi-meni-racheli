@@ -1,0 +1,348 @@
+.navbar {
+  position: fixed;
+  width: 70%;
+  max-width: 1200px;
+  height: 80px;
+  z-index: 1000;
+  box-sizing: border-box;
+  font-family: "AssistantR";
+  margin: 20px auto;
+  border-radius: 40px;
+  transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  opacity: 0;
+  transform: translateY(-30px);
+  left: 15%;
+  right: 15%;
+  top: 20px;
+  background: #ffffff;
+  box-shadow: 
+    inset 0 2px 8px rgba(0, 0, 0, 0.08),
+    inset 0 4px 16px rgba(0, 0, 0, 0.05),
+    0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Visibility classes */
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(-30px);
+  pointer-events: none;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.navbarInner {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  border-radius: 40px;
+  position: relative;
+  z-index: 1;
+  background: transparent;
+}
+
+/* Logo styles */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  height: 60px;
+  object-fit: cover;
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
+  animation: pulseLogo 3s ease-in-out infinite;
+}
+
+@keyframes pulseLogo {
+  0%, 100% { 
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3)); 
+  }
+  50% { 
+    filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.5)); 
+  }
+}
+
+.mobileLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobileLogo img {
+  height: 70px;
+  object-fit: cover;
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
+}
+
+/* Enhanced Menu button with special light gray inner shadow */
+.menuButton {
+  position: relative;
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  color: #2c2c2c;
+  border: 1px solid rgba(200, 200, 200, 0.3);
+  font-family: "AssistantR";
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 8px 20px;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  border-radius: 30px;
+  margin-right: 50px;
+  min-width: 160px;
+  height: 45px;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  
+  /* Special light gray inner shadow effect */
+  box-shadow: 
+    /* Inner shadows for depth */
+    inset 0 2px 4px rgba(169, 169, 169, 0.25),
+    inset 0 4px 8px rgba(169, 169, 169, 0.15),
+    inset 0 -1px 2px rgba(211, 211, 211, 0.4),
+    inset -2px 0 4px rgba(190, 190, 190, 0.1),
+    inset 2px 0 4px rgba(190, 190, 190, 0.1),
+    
+    /* Outer shadows for floating effect */
+    0 2px 8px rgba(0, 0, 0, 0.08),
+    0 4px 16px rgba(169, 169, 169, 0.12);
+  
+  /* Subtle backdrop blur */
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+.menuButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 
+    /* Enhanced inner shadows on hover */
+    inset 0 3px 6px rgba(169, 169, 169, 0.3),
+    inset 0 6px 12px rgba(169, 169, 169, 0.2),
+    inset 0 -2px 4px rgba(211, 211, 211, 0.5),
+    inset -3px 0 6px rgba(190, 190, 190, 0.15),
+    inset 3px 0 6px rgba(190, 190, 190, 0.15),
+    
+    /* Enhanced outer shadows */
+    0 4px 12px rgba(0, 0, 0, 0.12),
+    0 8px 24px rgba(169, 169, 169, 0.18);
+}
+
+.buttonContent {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  direction: rtl;
+  height: 100%;
+}
+
+.buttonText {
+  display: block;
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.menuButton:active {
+  transform: scale(0.98) translateY(0);
+  box-shadow: 
+    /* Pressed state - deeper inner shadows */
+    inset 0 4px 8px rgba(169, 169, 169, 0.4),
+    inset 0 8px 16px rgba(169, 169, 169, 0.25),
+    inset 0 -1px 2px rgba(211, 211, 211, 0.3),
+    inset -2px 0 4px rgba(190, 190, 190, 0.2),
+    inset 2px 0 4px rgba(190, 190, 190, 0.2),
+    
+    /* Reduced outer shadows */
+    0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+/* Mobile menu styles with glass effect */
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1001;
+  animation: revealMenu 0.5s ease-out forwards;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobileMenu::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.4);
+  z-index: -1;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+
+.mobileMenuHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.closeButton {
+  color: #333;
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.closeButton:hover {
+  color: #111;
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: rotate(90deg);
+}
+
+.mobileMenuLogo {
+  padding: 10px;
+}
+
+.mobileMenuLogo img {
+  height: 60px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
+}
+
+.mobileMenuContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  animation: fadeInContent 0.5s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+.mobileMenu.closing {
+  animation: closeMenu 0.5s ease-in forwards;
+}
+
+.closing .mobileMenuContent {
+  animation: fadeOutContent 0.5s ease-in forwards;
+}
+
+@keyframes revealMenu {
+  from {
+    clip-path: circle(0% at top right);
+  }
+  to {
+    clip-path: circle(150% at top right);
+  }
+}
+
+@keyframes closeMenu {
+  from {
+    clip-path: circle(150% at top right);
+  }
+  to {
+    clip-path: circle(0% at top right);
+  }
+}
+
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutContent {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1200px) {
+  .navbar {
+    width: 80%;
+    left: 10%;
+    right: 10%;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    width: 90%;
+    left: 5%;
+    right: 5%;
+  }
+  
+  .navbarInner {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    width: 95%;
+    height: 70px;
+    left: 2.5%;
+    right: 2.5%;
+  }
+  
+  .navbarInner {
+    padding: 0 15px;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+  .menuButton {
+    min-width: 140px;
+    font-size: 1rem;
+    padding: 6px 15px;
+    height: 40px;
+  }
+}

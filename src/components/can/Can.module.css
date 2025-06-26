@@ -1,0 +1,188 @@
+.container {
+  display: flex;
+  align-items: center;
+  margin: 15px auto;
+  background: linear-gradient(135deg, 
+    rgba(190, 194, 200, 0.08) 0%,
+    rgba(141, 145, 153, 0.12) 25%,
+    rgba(75, 85, 99, 0.10) 50%,
+    rgba(51, 56, 66, 0.10) 75%,
+    rgba(31, 41, 55, 0.061) 100%);
+  backdrop-filter: blur(80px) saturate(150%) brightness(1.15);
+  -webkit-backdrop-filter: blur(80px) saturate(150%) brightness(1.15);
+  padding: 0.75rem 1rem;
+  direction: rtl;
+  width: 320px;
+  border-radius: 24px;
+  position: relative;
+  z-index: 1;
+  border: 1px solid rgba(156, 163, 175, 0.15);
+  box-shadow: 
+    0 15px 20px -10px rgba(0, 0, 0, 0.15),
+    0 10px 10px -8px rgba(0, 0, 0, 0.08),
+    0 8px 16px -4px rgba(0, 0, 0, 0.06),
+    0 4px 8px -2px rgba(0, 0, 0, 0.04),
+    0 0 0 1px rgba(255, 255, 255, 0.02),
+    inset 0 2px 0 rgba(255, 255, 255, 0.55),
+    inset 0 -2px 0 rgba(107, 114, 128, 0.22),
+    inset 0 0 20px rgba(255, 255, 255, 0.08);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  overflow: hidden;
+}
+
+/* מסגרת זכוכית מבריקה */
+.container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(249, 250, 251, 0.5) 0%,
+    rgba(156, 163, 175, 0.18) 30%,
+    transparent 50%,
+    rgba(107, 114, 128, 0.25) 70%,
+    rgba(75, 85, 99, 0.35) 100%);
+  border-radius: 24px;
+  z-index: 2;
+  pointer-events: none;
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  padding: 1px;
+  opacity: 0.7;
+}
+
+.container:hover {
+  transform: translateY(-8px) scale(1.03);
+  transition: all ease 1s;
+  backdrop-filter: blur(100px) saturate(180%) brightness(1.25);
+  -webkit-backdrop-filter: blur(100px) saturate(180%) brightness(1.25);
+}
+
+.text {
+  font-family: "AssistantR";
+  font-size: 1.1rem;
+  direction: rtl;
+  margin-right: 12px;
+  font-weight: 400;
+  width: 70%;
+  position: relative;
+  color: rgba(31, 41, 55, 0.9);
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  z-index: 3;
+  text-shadow: 
+    0 1px 2px rgba(255, 255, 255, 0.4),
+    0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.icon {
+  width: 20%;
+  color: rgba(55, 65, 81, 0.8);
+  position: relative;
+  z-index: 3;
+  opacity: 0.85;
+  filter: 
+    drop-shadow(0 2px 3px rgba(255, 255, 255, 0.3))
+    drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+/* מתחת ל-350px */
+@media (max-width: 349px) {
+  .container {
+    width: 280px;
+    padding: 0.4rem 0.6rem;
+    border-radius: 16px;
+    margin: 8px auto;
+    box-shadow: 
+      0 8px 12px -4px rgba(0, 0, 0, 0.08),
+      0 4px 8px -3px rgba(0, 0, 0, 0.04),
+      0 2px 4px -1px rgba(0, 0, 0, 0.02),
+      0 0 0 1px rgba(255, 255, 255, 0.02),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3),
+      inset 0 -1px 0 rgba(107, 114, 128, 0.1);
+  }
+
+  .container::after {
+    border-radius: 16px;
+  }
+
+  .text {
+    font-size: 0.85rem;
+    width: 75%;
+    margin-right: 5px;
+    line-height: 1.2;
+  }
+
+  .icon {
+    width: 25%;
+  }
+
+  .container:hover {
+    transform: translateY(-4px) scale(1.01);
+  }
+}
+
+/* בין 350px ל-450px */
+@media (min-width: 350px) and (max-width: 450px) {
+  .container {
+    width: 300px;
+    padding: 0.5rem 0.75rem;
+    border-radius: 18px;
+    margin: 10px auto;
+  }
+
+  .container::after {
+    border-radius: 18px;
+  }
+
+  .text {
+    font-size: 0.9rem;
+    width: 72%;
+    margin-right: 6px;
+  }
+
+  .icon {
+    width: 20%;
+  }
+
+  .container:hover {
+    transform: translateY(-5px) scale(1.015);
+  }
+}
+
+/* בין 450px ל-550px */
+@media (min-width: 450px) and (max-width: 550px) {
+  .container {
+    width: 380px;
+    padding: 0.8rem 1.1rem;
+    border-radius: 26px;
+    margin: 16px auto;
+  }
+
+  .container::after {
+    border-radius: 26px;
+  }
+
+  .text {
+    font-size: 1.15rem;
+    width: 68%;
+    margin-right: 14px;
+    line-height: 1.45;
+  }
+
+  .icon {
+    width: 18%;
+  }
+
+  .container:hover {
+    transform: translateY(-9px) scale(1.035);
+  }
+}

@@ -1,0 +1,253 @@
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 90%;
+    direction: rtl;
+    margin: 2% auto;
+}
+
+/* Base styles */
+.title {
+    font-family: "OpenSans", sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 1rem auto 0rem;
+    background: linear-gradient(135deg, #000000, #1a1a1a, #333333, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    max-width: 92%;
+    direction: rtl;
+    position: relative;
+    padding: 0 1rem;
+    letter-spacing: -1px;
+    z-index: 1;
+    transition: all 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.description {
+    font-family: "AssistantR", sans-serif;
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 1rem auto 1rem;
+    background: linear-gradient(135deg, #000000, #1a1a1a, #333333, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    max-width: 92%;
+    direction: rtl;
+    position: relative;
+    padding: 0 1rem;
+    z-index: 1;
+    transition: all 0.5s ease;
+}
+
+/* הסגנונות החדשים עבור הunderline המיוחד */
+.highlighted {
+  position: relative;
+  display: inline-block;
+  padding: 2px 4px;
+  color: #2c2c2c;
+  background: linear-gradient(135deg, #000000, #1a1a1a, #333333, #000000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Underline עדין וצר בגווני אפור */
+.highlighted::before {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, 
+    #b8b8b8 0%, 
+    #d4d4d4 20%, 
+    #e8e8e8 40%, 
+    #f0f0f0 50%, 
+    #e8e8e8 60%, 
+    #d4d4d4 80%, 
+    #b8b8b8 100%
+  );
+  border-radius: 2px;
+  animation: drawLine 1.8s ease-out forwards, subtleShimmer 4s ease-in-out infinite 2s;
+  box-shadow: 0 1px 3px rgba(184, 184, 184, 0.15);
+}
+
+.highlighted::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 5px;
+  background: linear-gradient(90deg, 
+    rgba(184, 184, 184, 0.2) 0%, 
+    rgba(212, 212, 212, 0.25) 30%, 
+    rgba(240, 240, 240, 0.3) 50%, 
+    rgba(212, 212, 212, 0.25) 70%, 
+    rgba(184, 184, 184, 0.2) 100%
+  );
+  border-radius: 4px;
+  animation: drawGlow 2s ease-out forwards;
+  filter: blur(1px);
+}
+
+/* אנימציות */
+@keyframes drawLine {
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    width: 110%;
+    opacity: 1;
+  }
+}
+
+@keyframes drawGlow {
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    width: 115%;
+    opacity: 0.5;
+  }
+}
+
+@keyframes subtleShimmer {
+  0%, 100% {
+    opacity: 0.7;
+    transform: translateX(-50%) scaleX(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: translateX(-50%) scaleX(1.02);
+  }
+}
+
+/* מתחת ל-350px */
+@media (max-width: 349px) {
+    .row {
+        width: 95%;
+        margin: 3% auto;
+        flex-direction: column;
+    }
+    
+    .title {
+        font-size: 1.8rem;
+        max-width: 95%;
+        padding: 0 0.5rem;
+        margin: 0.8rem auto 0rem;
+    }
+    
+    .description {
+        font-size: 1rem;
+        max-width: 95%;
+        padding: 0 0.5rem;
+        margin: 0.8rem auto 0.8rem;
+    }
+}
+
+/* 350-450px */
+@media (min-width: 350px) and (max-width: 450px) {
+    .row {
+        width: 93%;
+        margin: 2.5% auto;
+    }
+    
+    .title {
+        font-size: 1.6rem;
+        max-width: 94%;
+        padding: 0 0.7rem;
+        margin: 0.9rem auto 0rem;
+    }
+    
+    .description {
+        font-size: 1.1rem;
+        max-width: 94%;
+        padding: 0 0.7rem;
+        margin: 0.9rem auto 0.9rem;
+    }
+}
+
+/* 450-550px */
+@media (min-width: 450px) and (max-width: 550px) {
+    .row {
+        width: 91%;
+        margin: 2.2% auto;
+    }
+    
+    .title {
+        font-size: 1.8rem;
+        max-width: 93%;
+        padding: 0 0.8rem;
+        margin: 0.95rem auto 0rem;
+    }
+    
+    .description {
+        font-size: 1.15rem;
+        max-width: 93%;
+        padding: 0 0.8rem;
+        margin: 0.95rem auto 0.95rem;
+    }
+}
+
+/* 550-650px */
+@media (min-width: 550px) and (max-width: 650px) {
+    .row {
+        width: 90%;
+        margin: 2% auto;
+    }
+    
+    .title {
+        font-size: 2rem;
+        max-width: 92%;
+        padding: 0 0.9rem;
+        margin: 1rem auto 0rem;
+    }
+    
+    .description {
+        font-size: 1.2rem;
+        max-width: 92%;
+        padding: 0 0.9rem;
+        margin: 1rem auto 1rem;
+    }
+}
+
+/* 650-750px */
+@media (min-width: 650px) and (max-width: 750px) {
+    .row {
+        width: 89%;
+        margin: 1.8% auto;
+    }
+    
+    .title {
+        font-size: 2.1rem;
+        max-width: 91%;
+        padding: 0 1rem;
+        margin: 1rem auto 0rem;
+    }
+    
+    .description {
+        font-size: 1.25rem;
+        max-width: 91%;
+        padding: 0 1rem;
+        margin: 1rem auto 1rem;
+    }
+}

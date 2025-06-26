@@ -1,0 +1,202 @@
+.container {
+  position: relative;
+  width: 400px;
+  height: 600px;
+  max-width: 100%;
+  margin: 0 auto;
+ 
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  border-radius: 12px;
+
+}
+
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.counterLabel{
+font-family:"AssistantR"
+
+}
+.glassCounterContainer {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Heebo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  direction: rtl;
+}
+
+.glassCounterRow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 32px;
+  padding: 10px 20px; /* הגדלת הפדינג עוד יותר */
+
+  box-shadow: 
+
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+
+
+.glassOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.03) 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  pointer-events: none;
+  border-radius: 32px;
+}
+
+.counterItem {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 48px; /* הגדלת הפדינג לתיאורים רחבים יותר */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.counterNumber {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  line-height: 1;
+}
+
+.suffix {
+  font-size: 2rem;
+  opacity: 0.85;
+  margin-left: 2px;
+}
+
+.counterLabel {
+  font-size: 1.1rem;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  text-transform: lowercase;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  white-space: nowrap; /* מונע שבירת שורות */
+}
+
+.divider {
+  position: relative;
+  z-index: 2;
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  margin: 0 8px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .container {
+    width: 350px;
+    height: 525px;
+    padding-bottom: 30px;
+  }
+
+  .glassCounterContainer {
+    width: auto;
+    margin-left: 0;
+  }
+
+  .glassCounterRow {
+    padding: 20px 48px; /* הגדלת הפדינג גם במובייל */
+  }
+  
+  .counterItem {
+    padding: 0 32px; /* הגדלת הפדינג של התיאורים במובייל */
+  }
+  
+  .counterNumber {
+    font-size: 2.2rem;
+  }
+  
+  .suffix {
+    font-size: 1.6rem;
+  }
+  
+  .counterLabel {
+    font-size: 0.8rem;
+  }
+  
+  .divider {
+    height: 50px;
+    margin: 0 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 300px;
+    height: 450px;
+    padding-bottom: 20px;
+  }
+
+  .glassCounterContainer {
+    width: auto;
+    margin-left: 0;
+  }
+
+  .glassCounterRow {
+    padding: 16px 40px; /* הגדלת הפדינג גם במסכים קטנים */
+  }
+  
+  .counterItem {
+    padding: 0 28px; /* הגדלת הפדינג של התיאורים במסכים קטנים */
+  }
+  
+  .counterNumber {
+    font-size: 1.8rem;
+  }
+  
+  .suffix {
+    font-size: 1.4rem;
+  }
+  
+  .counterLabel {
+    font-size: 0.75rem;
+  }
+  
+  .divider {
+    height: 40px;
+    margin: 0 4px;
+  }
+}
