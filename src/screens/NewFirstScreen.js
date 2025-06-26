@@ -1,9 +1,11 @@
 import React, { useEffect, useState, useRef } from 'react';
 import styles from './NewFirstScreen.module.css';
 import racheli from "../images/רחלי לוי תדמית ללא רקע.png";
+import Loader from '../components/loader/Loader';
 
 const NewFirstScreen = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [imageLoaded, setImageLoaded] = useState(false);
   const bgImageTopRef = useRef(null);
   const bgImageBottomRef = useRef(null);
 
@@ -11,18 +13,35 @@ const NewFirstScreen = () => {
     console.log("רחלי, אני רוצה את הקורס!");
   };
 
+  // טעינת התמונה
+  useEffect(() => {
+    const img = new Image();
+    img.onload = () => {
+      setImageLoaded(true);
+    };
+    img.onerror = () => {
+      // אם יש שגיאה בטעינת התמונה, עדיין הצג את הקומפוננטה
+      setImageLoaded(true);
+    };
+    img.src = racheli;
+  }, []);
+
   // מעקב אחרי מיקום העכבר עבור אפקט הגרדיאנט
   useEffect(() => {
+    if (!imageLoaded) return; // רק אם התמונה נטענה
+    
     const handleMouseMove = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
     
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
+  }, [imageLoaded]);
 
   // מעקב אחרי גלילה עבור אפקט סיבוב התמונות
   useEffect(() => {
+    if (!imageLoaded) return; // רק אם התמונה נטענה
+    
     const handleScroll = () => {
       const scrollY = window.scrollY;
       
@@ -37,7 +56,12 @@ const NewFirstScreen = () => {
     
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [imageLoaded]);
+
+  // אם התמונה עדיין לא נטענה, הצג את ה-Loader
+  if (!imageLoaded) {
+    return <Loader />;
+  }
 
   return (
     <div className={styles.container}>
