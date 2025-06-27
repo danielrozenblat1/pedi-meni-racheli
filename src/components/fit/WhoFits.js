@@ -1,51 +1,75 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Check, X, Target, Award, Book, Heart, Users, Clock, DollarSign, TrendingUp } from 'lucide-react';
 import styles from './WhoFits.module.css';
 import Button from '../button/Button';
+import ScrollReveal from 'scrollreveal';
 
 const Fit = () => {
+  useEffect(() => {
+    const sr = ScrollReveal({
+      origin: 'right',
+      distance: '50px',
+      duration: 800,
+      delay: 100,
+      easing: 'ease-out',
+      reset: false,
+      interval: 100
+    });
+
+    // אנימציה לאייקונים
+    sr.reveal(`.${styles.iconWrapper}`, {
+      origin: 'right',
+      distance: '60px',
+      duration: 700,
+      interval: 150
+    });
+
+    return () => {
+      sr.destroy();
+    };
+  }, []);
+
   const suitablePoints = [
     {
       text: "למדת איפור קבוע/מיקרובליידינג ורוצה להעמיק את הידע שיתן לך ביטחון לעבוד",
       icon: <div className={styles.iconWrapper}><Book className={styles.icon} /></div>
     },
-    {
-      text: "מרגישה שמשהו חסר ו'עדיין לא שם' - לא יודעת בדיוק על מה להצביע",
-      icon: <div className={styles.iconWrapper}><Target className={styles.icon} /></div>
-    },
+    
     {
       text: "למדת בעבר ורוצה לחזור לתחום והפעם... בגדול",
       icon: <div className={styles.iconWrapper}><TrendingUp className={styles.icon} /></div>
     },
-    {
-      text: "רוצה להביא ללקוחות שלך את טכניקת RL הייחודית",
-      icon: <div className={styles.iconWrapper}><Award className={styles.icon} /></div>
+   {
+      text: "את מחפשת לקבל את כל הכלים - הטכנים והמנטלים במקום אחד מרוכז",
+      icon: <div className={styles.iconWrapper}><TrendingUp className={styles.icon} /></div>
     },
+ 
     {
-      text: "מתקשה בבחירת צבע/שרטוט צורה/החלמות/שרטוט שיערות דקיקות במראה טבעי",
-      icon: <div className={styles.iconWrapper}><Heart className={styles.icon} /></div>
-    },
-    {
-      text: "רוצה להעשיר את הידע מכל סיבה ולהגיע לביטחון מלא בעבודה",
+      text: "רוצה להעשיר את הידע מכל סיבה ולהגיע לביטחון מלא בעבודה שלך",
       icon: <div className={styles.iconWrapper}><Users className={styles.icon} /></div>
-    }
+    },
+      {
+      text: "מרגישה שמשהו חסר ו'עדיין לא שם' - לא יודעת בדיוק על מה להצביע",
+      icon: <div className={styles.iconWrapper}><Target className={styles.icon} /></div>
+    },
   ];
 
   const notSuitablePoints = [
     {
-      text: "לא רצינית או לא מוכנה להתמיד ולהשקיע באמת",
+      text: "את לא מוכנה להתמיד ולהשקיע",
       icon: <div className={styles.iconWrapper}><X className={styles.icon} /></div>
     },
-    {
-      text: "לא מוכנה לתרגל גם מעבר לקורס - רק רוצה 'פתרון קסם'",
-      icon: <div className={styles.iconWrapper}><Clock className={styles.icon} /></div>
-    },
-    {
-      text: "חושבת שהלקוחות ידפקו בדלת מיד אחרי הקורס ללא מאמץ נוסף",
+      {
+      text: "את חושבת שהלקוחות ידפקו בדלת מיד אחרי הקורס",
       icon: <div className={styles.iconWrapper}><DollarSign className={styles.icon} /></div>
     },
     {
-      text: "מחפשת קיצורי דרך במקום השקעה אמיתית במקצוע",
+      text: "את לא מוכנה לתרגל גם מעבר לקורס עצמו'",
+      icon: <div className={styles.iconWrapper}><Clock className={styles.icon} /></div>
+    },
+  
+    {
+      text: "את מחפשת קיצורי דרך במקום השקעה אמיתית במקצוע",
       icon: <div className={styles.iconWrapper}><X className={styles.icon} /></div>
     }
   ];
@@ -86,7 +110,7 @@ const Fit = () => {
         </div>
            
       </div>
-          <Button text="רחלי, אני מתאימה!"/>
+      <Button text="רחלי, אני מתאימה!"/>
     </div>
  
  </>

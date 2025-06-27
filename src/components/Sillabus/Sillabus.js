@@ -112,7 +112,7 @@ const EyebrowSyllabus = () => {
               </div>
               <div className={styles.infoContent}>
                 <h3 className={styles.infoTitle}>משך הקורס</h3>
-                <p className={styles.infoText}>45 שעות אקדמיות</p>
+                <p className={styles.infoText}>50 שעות אקדמיות</p>
               </div>
             </div>
             
@@ -122,7 +122,7 @@ const EyebrowSyllabus = () => {
               </div>
               <div className={styles.infoContent}>
                 <h3 className={styles.infoTitle}>כמות טיפולים</h3>
-                <p className={styles.infoText}>12 טיפולים מעשיים</p>
+                <p className={styles.infoText}>8 טיפולים מעשיים</p>
               </div>
             </div>
             
@@ -131,8 +131,8 @@ const EyebrowSyllabus = () => {
                 <FiRefreshCw />
               </div>
               <div className={styles.infoContent}>
-                <h3 className={styles.infoTitle}>טיפולי המשך</h3>
-                <p className={styles.infoText}>טיפולים מלאים לאחר החלמה</p>
+                <h3 className={styles.infoTitle}>שיטה ייחודית</h3>
+                <p className={styles.infoText}>תלמדי את שיטת RL מבית רחלי לוי</p>
               </div>
             </div>
             
@@ -142,7 +142,7 @@ const EyebrowSyllabus = () => {
               </div>
               <div className={styles.infoContent}>
                 <h3 className={styles.infoTitle}>טיפולי חידוש</h3>
-                <p className={styles.infoText}>תחזוקה מקצועית ארוכת טווח</p>
+                <p className={styles.infoText}>הקורס מכיל גם טיפולי המשך וחידושים</p>
               </div>
             </div>
           </div>

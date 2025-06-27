@@ -2,7 +2,10 @@ import React from 'react';
 import { FaHeartBroken, FaSignOutAlt, FaPuzzlePiece, FaLightbulb } from 'react-icons/fa';
 import styles from "./ThirdScreen.module.css";
 import EyebrowSyllabus from '../components/Sillabus/Sillabus';
-
+import IconTextComponent from '../components/can copy/Can';
+import infinity from "../icons/wired-outline-2177-infinity-sign-hover-draw (2).json"
+import eight from "../icons/wired-outline-115-blackboard-clean-hover-pinch.json"
+import team from "../icons/wired-outline-1004-management-team-loop-smooth.json"
 const ThirdScreen = () => {
   return (
     <>
@@ -50,6 +53,15 @@ const ThirdScreen = () => {
       </div>
       
       <EyebrowSyllabus/>
+          
+      <div className={styles.title}>
+וכמובן שכל מי שרוכשת את הקורס מקבלת:
+   </div>
+      <div className={styles.row}>
+<IconTextComponent text="גישה לקורס לכל החיים! תוכלי לחזור לקורס ולחזק נקודות שפספסת במהלך הזמן" icon={infinity}/>
+<IconTextComponent text="אופציה לבוא לחיזוק פרונטלי אצלנו באקדמיה" icon={eight}/>
+<IconTextComponent text="תמיכה לכל שאלה שצצה לך ישירות מהצוות שלנו" icon={team}/>
+      </div>
     </>
   );
 };
