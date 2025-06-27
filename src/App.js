@@ -16,6 +16,7 @@ import ForthScreen from './screens/ForthScreen';
 import ByMe from './components/ByMe/ByMe';
 function App() {
   return <>
+  <div style={{overflowX:"hidden"}}>
   <NavBarNew/>
   <NewFirstScreen/>
 {/* <FirstScreen/> */}
@@ -27,6 +28,7 @@ function App() {
 <Fit/>
 <ForthScreen/>
 <ByMe/>
+</div>
   </>
 }
 
