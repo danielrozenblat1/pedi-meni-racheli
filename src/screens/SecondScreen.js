@@ -1,6 +1,8 @@
 import IconTextComponent from "../components/can/Can"
 import styles from "./SecondScreen.module.css"
 import needle from "../icons/wired-outline-775-needle-hover-pinch.json"
+import learn from "../icons/wired-outline-2454-learn-more-hover-loading.json"
+import secure from "../icons/wired-outline-25-error-cross-hover-loading.json"
 import { BenefitsContainer } from "../components/benefitsHistalmut/BenefitHishtalmut"
 const SecondScreen=()=><>
     <div className={styles.title}>לא הגעת לכאן סתם</div>
@@ -8,8 +10,8 @@ const SecondScreen=()=><>
  <div className={styles.title}>את מרגישה ש</div>
     <div className={styles.row}>
         <IconTextComponent text="הטכניקה שלך עדיין לא טובה מספיק כדי שישלמו לך" icon={needle} />
-        <IconTextComponent text="אין לך עדיין מספיק בטחון כדי לקבל לקוחות ואת מפחדת לטעות עליהן" icon={needle} />
-        <IconTextComponent text="הקורס שעברת לא היה מספיק טוב וחסר לך הרבה ידע מקצועי" icon={needle} />
+        <IconTextComponent text="אין לך עדיין מספיק בטחון כדי לקבל לקוחות ואת מפחדת לטעות עליהן" icon={secure} />
+        <IconTextComponent text="הקורס שעברת לא היה מספיק טוב וחסר לך ידע מקצועי" icon={learn} />
     </div>
     <div className={styles.description}>ואני רוצה שתדעי שזה לגיטימי! הייתי בדיוק במצב שאת נמצאת בו עכשיו ובדיוק מהסיבה הזו אני כאן לעזור לך</div>
   <div className={styles.title}>להגיע למצב שאת</div> 
