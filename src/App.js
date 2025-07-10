@@ -14,6 +14,8 @@ import Shorts from './components/shorts/Shorts';
 import ThirdScreen from './screens/ThirdScreen';
 import ForthScreen from './screens/ForthScreen';
 import ByMe from './components/ByMe/ByMe';
+import FifthScreen from './screens/FifthScreen';
+import SixthScreen from './screens/SixthScreen';
 function App() {
   return <>
   <div style={{overflowX:"hidden"}}>
@@ -25,7 +27,9 @@ function App() {
 <Certificates/>
 <Shorts/>
 <ThirdScreen/>
+<FifthScreen/>
 <Fit/>
+<SixthScreen/>
 <ForthScreen/>
 <ByMe/>
 </div>

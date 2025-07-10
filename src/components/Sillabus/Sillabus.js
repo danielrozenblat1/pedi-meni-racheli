@@ -86,7 +86,7 @@ const EyebrowSyllabus = () => {
     },
     {
       title: "הדגמות של 6 טיפולים שונים",
-      subtitle: "התנסות מעשית ומגוונת"
+   
     }
   ];
 
@@ -100,7 +100,7 @@ const EyebrowSyllabus = () => {
           <h1 className={styles.mainTitle}>
             קורס מיקרובליידינג בשיטת RL
           </h1>
-          <p className={styles.subtitle}>קורס המיקרובליידינג המקיף בארץ</p>
+          <p className={styles.subtitle}>קורס המיקרובליידינג הדיגיטלי המקיף בארץ</p>
         </div>
 
         {/* פרטי הקורס */}

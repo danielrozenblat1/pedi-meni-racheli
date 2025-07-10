@@ -106,7 +106,7 @@ const NewFirstScreen = () => {
             ולהפוך את התשוקה לקריירה שתמיד חלמת עליה
           </h1>
           <p className={styles.subtitle}>
-            <span className={styles.highlighted}>כל הידע במקום אחד - מהבסיס עד לפרטים הכי קטנים</span>
+            <span className={styles.highlighted}>הקורס הדיגיטלי המקיף בארץ - מהבסיס עד לפרטים הכי קטנים</span>
           </p>
         </div>
 
@@ -125,7 +125,7 @@ const NewFirstScreen = () => {
             className={styles.button} 
             onClick={handleButtonClick}
           >
-            רחלי, קחי אותי לקורס!
+            רחלי, קחי אותי להרשמה!
           </button>
         </div>
       </div>

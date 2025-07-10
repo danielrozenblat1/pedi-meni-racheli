@@ -44,10 +44,20 @@ const ThirdScreen = () => {
         וזו הסיבה שהחלטתי להוציא את הקורס
       </div>
       
-      <div className={styles.description}>
+      {/* <div className={styles.description}>
         הקורס מכיל גם את כל הידע הטכני שאת צריכה לקבל מ-0 וגם את כל הכלים המנטלים כדי לצבור בטחון ולהפוך למאסטרית שמתפרנסת יפה מהתחום!
-      </div>
-      
+      </div> */}
+          <div className={styles.description}>
+            בשביל לעשות לך סדר אמיתי בדברים! בלי חצאי שיטות ובלי עוד השתלמויות צדדיות
+        </div>
+        
+        <div className={styles.description}>
+            חשוב לי שמי שלומדת את הטכניקה שלי תלמד אותה לעומק ואת כל השלבים! ולכן הקורס כולל למידה מעמיקה של כל התהליכים, מהבסיס ועד לפרטים הקטנים והכל במקום אחד מקיף. 
+        </div>
+        
+        <div className={styles.description}>
+            הקורס בנוי מנקודת הנחה שאת מגיעה בלי ידע מקדים ונלמד את הכול לגמרי מאפס, שלב אחר שלב!
+        </div>
       <div className={styles.title}>
         אז תחזיקי חזק.. זה עובד ככה:
       </div>
@@ -55,10 +65,10 @@ const ThirdScreen = () => {
       <EyebrowSyllabus/>
           
       <div className={styles.title}>
-וכמובן שכל מי שרוכשת את הקורס מקבלת:
+כל מי שרוכשת את הקורס מקבלת:
    </div>
       <div className={styles.row}>
-<IconTextComponent text="גישה לקורס לכל החיים! תוכלי לחזור לקורס ולחזק נקודות שפספסת במהלך הזמן" icon={infinity}/>
+<IconTextComponent text="גישה לקורס לשלושה חודשים מלאים! תוכלי לחזור לקורס ולחזק נקודות שפספסת במהלך הזמן" icon={infinity}/>
 <IconTextComponent text="אופציה לבוא לחיזוק פרונטלי אצלנו באקדמיה" icon={eight}/>
 <IconTextComponent text="תמיכה לכל שאלה שצצה לך ישירות מהצוות שלנו" icon={team}/>
       </div>

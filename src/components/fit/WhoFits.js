@@ -31,12 +31,12 @@ const Fit = () => {
 
   const suitablePoints = [
     {
-      text: "למדת איפור קבוע/מיקרובליידינג ורוצה להעמיק את הידע שיתן לך ביטחון לעבוד",
+      text: "למדת איפור קבוע/מיקרובליידינג ואת רוצה להעמיק את הידע שיתן לך ביטחון לעבוד",
       icon: <div className={styles.iconWrapper}><Book className={styles.icon} /></div>
     },
     
     {
-      text: "למדת בעבר ורוצה לחזור לתחום והפעם... בגדול",
+      text: "למדת בעבר ואת רוצה לחזור לתחום והפעם... בגדול",
       icon: <div className={styles.iconWrapper}><TrendingUp className={styles.icon} /></div>
     },
    {
@@ -49,8 +49,17 @@ const Fit = () => {
       icon: <div className={styles.iconWrapper}><Users className={styles.icon} /></div>
     },
       {
-      text: "מרגישה שמשהו חסר ו'עדיין לא שם' - לא יודעת בדיוק על מה להצביע",
+      text: "מרגישה שמשהו חסר כדי שתצליחי בתחום אבל את לא יודעת בדיוק על מה להצביע",
       icon: <div className={styles.iconWrapper}><Target className={styles.icon} /></div>
+    },
+     
+    {
+      text: "את אוהבת ללמוד בקצב שלך, לא בקבוצות וללא לחץ חיצוני אחר",
+      icon: <div className={styles.iconWrapper}><Clock className={styles.icon} /></div>
+    },
+    {
+      text: "יש לך מחשב ואת רוצה להתחיל להצליח בתחום!",
+      icon: <div className={styles.iconWrapper}><Heart className={styles.icon} /></div>
     },
   ];
 
@@ -59,25 +68,23 @@ const Fit = () => {
       text: "את לא מוכנה להתמיד ולהשקיע",
       icon: <div className={styles.iconWrapper}><X className={styles.icon} /></div>
     },
-      {
-      text: "את חושבת שהלקוחות ידפקו בדלת מיד אחרי הקורס",
-      icon: <div className={styles.iconWrapper}><DollarSign className={styles.icon} /></div>
-    },
+ 
     {
-      text: "את לא מוכנה לתרגל גם מעבר לקורס עצמו'",
+      text: "את לא מוכנה לתרגל גם מעבר לקורס עצמו",
       icon: <div className={styles.iconWrapper}><Clock className={styles.icon} /></div>
     },
   
     {
       text: "את מחפשת קיצורי דרך במקום השקעה אמיתית במקצוע",
       icon: <div className={styles.iconWrapper}><X className={styles.icon} /></div>
-    }
+    },
+ 
   ];
 
   return <>
     <div className={styles.container}>
       <div className={styles.glassCard}>
-        <h1 className={styles.mainTitle}>״רחלי, איך אני אדע אם הקורס מתאים לי?״</h1>
+        <h1 className={styles.mainTitle}>״ואיך אני אדע אם הקורס מתאים לי?״</h1>
         
         <div className={styles.columnsContainer}>
           <div className={styles.column}>
@@ -110,6 +117,25 @@ const Fit = () => {
         </div>
            
       </div>
+
+      <div className={styles.mainTitle}>ובנימה אישית</div>
+      
+      <div className={styles.description}>
+        למתכונת המנצחת הזאת הגעתי לאחר שנים של הדרכה והבנה <strong>בצרכים הבסיסיים של כל מאסטרית</strong> (הטכנים והמנטלים)
+      </div>
+      
+      <div className={styles.description}>
+        הקורס הזה נבנה מהטעויות והכאבים <strong>שחוויתי על הבשר שלי</strong> ומכל מה שאלפי התלמידות שלנו באקדמיה שיתפו אותנו <strong>לפני הכניסה לתהליך ואחריו</strong>
+      </div>
+      
+      <div className={styles.description}>
+        הקורס נועד לעשות לך סדר בראש ולרכז לך את כל הידע שאת צריכה <strong>במקום אחד!</strong> הקורס <strong>מונגש וברור</strong> כאילו רק עכשיו התחלת <strong>ללמוד את המקצוע מ-0</strong> והשקעתי בו <strong>מאות אלפי שקלים</strong> כדי שהוא יהיה ברמה הכי גבוהה שאפשר
+      </div>
+      
+      <div className={styles.description}>
+        אני בטוחה שעם הרעב שלך להצליח, הטכניקה המנצחת שלי והכלים שתקבלי בקורס - השמיים יהיו הגבול מבחינתך!
+      </div>
+      
       <Button text="רחלי, אני מתאימה!"/>
     </div>
  

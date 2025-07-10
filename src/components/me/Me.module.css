@@ -258,12 +258,12 @@
 /* Final text styling */
 .finalText {
   font-family: 'Heebo', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 400;
   color: #555555;
   margin-bottom: 2rem;
   text-align: center;
-  font-style: italic;
+
   margin-top: 2.5rem;
 }
 
