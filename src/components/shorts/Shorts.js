@@ -78,7 +78,8 @@ const Shorts = () => {
     'https://www.youtube.com/shorts/lfUUpVyT09Q',
     'https://www.youtube.com/shorts/Sm-uFHBq5P0',
     'https://www.youtube.com/shorts/IhWUwdp9VC0',
-    'https://www.youtube.com/shorts/oIxrGt3kTNI'
+    'https://www.youtube.com/shorts/oIxrGt3kTNI',
+    'https://www.youtube.com/shorts/qrhS0gHmBO0',
   ];
 
   const getVideoId = (url) => {

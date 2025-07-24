@@ -122,7 +122,7 @@ const EyebrowSyllabus = () => {
               </div>
               <div className={styles.infoContent}>
                 <h3 className={styles.infoTitle}>כמות טיפולים</h3>
-                <p className={styles.infoText}>8 טיפולים מעשיים</p>
+                <p className={styles.infoText}>הקורס מכיל צפייה ב-6 טיפולים שונים</p>
               </div>
             </div>
             
@@ -142,7 +142,7 @@ const EyebrowSyllabus = () => {
               </div>
               <div className={styles.infoContent}>
                 <h3 className={styles.infoTitle}>טיפולי חידוש</h3>
-                <p className={styles.infoText}>הקורס מכיל גם טיפולי המשך וחידושים</p>
+                <p className={styles.infoText}>הקורס מכיל גם צפייה בטיפול שני ובטיפול חידוש לאחר שנה</p>
               </div>
             </div>
           </div>

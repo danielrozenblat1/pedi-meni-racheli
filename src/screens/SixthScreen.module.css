@@ -14,6 +14,7 @@
     z-index: 1;
     transition: all 0.5s ease;
 }
+
 .videoContainer {
   display: flex;
   justify-content: center;
@@ -21,6 +22,7 @@
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
+  animation: fadeInUp 0.6s ease-out;
 }
 
 .videoPlayer {
@@ -40,116 +42,13 @@
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
 }
 
-.videoPlaceholder {
+.youtubePlayer {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: opacity 0.3s ease;
-}
-
-.videoPlaceholder:hover {
-  opacity: 0.9;
-}
-
-.playButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80px;
-  height: 80px;
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 50%;
-  backdrop-filter: blur(10px);
-  border: 2px solid rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.playButton:hover {
-  background: rgba(0, 0, 0, 0.8);
-  transform: scale(1.1);
-}
-
-.videoControls {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
-  padding: 20px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.videoPlayer:hover .videoControls {
-  opacity: 1;
-}
-
-.progressBar {
-  width: 100%;
-  height: 4px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 2px;
-  margin-bottom: 12px;
-  overflow: hidden;
-}
-
-.progress {
-  height: 100%;
-  background: #fff;
-  width: 30%;
-  border-radius: 2px;
-  transition: width 0.1s ease;
-}
-
-.controlsRow {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.timeDisplay {
-  color: white;
-  font-size: 14px;
-  font-weight: 500;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-}
-
-.rightControls {
-  display: flex;
-  gap: 12px;
-}
-
-.controlButton {
-  background: none;
-  border: none;
-  padding: 8px;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: background-color 0.2s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.controlButton:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.controlButton svg {
-  opacity: 0.9;
-  transition: opacity 0.2s ease;
-}
-
-.controlButton:hover svg {
-  opacity: 1;
+  border-radius: 16px;
 }
 
 /* Responsive Design */
@@ -169,35 +68,8 @@
     border-radius: 12px;
   }
   
-  .playButton {
-    width: 60px;
-    height: 60px;
-  }
-  
-  .playButton svg {
-    width: 32px;
-    height: 32px;
-  }
-  
-  .videoControls {
-    padding: 15px;
-  }
-  
-  .timeDisplay {
-    font-size: 12px;
-  }
-  
-  .rightControls {
-    gap: 8px;
-  }
-  
-  .controlButton {
-    padding: 6px;
-  }
-  
-  .controlButton svg {
-    width: 16px;
-    height: 16px;
+  .youtubePlayer {
+    border-radius: 12px;
   }
 }
 
@@ -214,6 +86,10 @@
   .videoPlayer {
     border-radius: 8px;
   }
+  
+  .youtubePlayer {
+    border-radius: 8px;
+  }
 }
 
 /* Animation for smooth entrance */
@@ -226,8 +102,4 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.videoContainer {
-  animation: fadeInUp 0.6s ease-out;
 }

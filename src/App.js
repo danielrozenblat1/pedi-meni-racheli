@@ -31,7 +31,7 @@ function App() {
 <Fit/>
 <SixthScreen/>
 <ForthScreen/>
-<ByMe/>
+
 </div>
   </>
 }
