@@ -55,7 +55,8 @@ const ThirdScreen = () => {
             חשוב לי שמי שלומדת את הטכניקה שלי תלמד אותה לעומק וכמו שצריך ככה שהכול יתחבר לך כמו פאזל בצורה מדוייקת! ולכן הקורס כולל למידה מעמיקה של כל התהליכים, מהבסיס ועד לפרטים הקטנים והכל במקום אחד מקיף. 
         </div>
         
-        <div className={styles.description}>
+        <div className={styles.description} style={{fontWeight:"bold"}}>
+      
             הקורס בנוי מנקודת הנחה שאת מגיעה בלי ידע מקדים ונלמד את הכול לגמרי מאפס, שלב אחר שלב!
         </div>
       <div className={styles.title}>

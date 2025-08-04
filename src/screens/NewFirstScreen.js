@@ -102,11 +102,10 @@ const NewFirstScreen = () => {
         <div className={styles.titleContainer}>
           <h1 className={styles.mainTitle}>
             הדרך להפוך למומחית מיקרובליידינג{' '}
-            <span className={styles.underlined}>שבטוחה בעצמה</span>{' '}
-            ולהפוך את התשוקה לקריירה שתמיד חלמת עליה
+            <span className={styles.underlined}>שבטוחה בעצמה</span>,  להפסיק לעבור ממקום למקום ולעשות סדר בדברים  <span className={styles.underlined}>מההתחלה ועד הסוף</span>
           </h1>
           <p className={styles.subtitle}>
-            <span className={styles.highlighted}>הקורס הדיגיטלי המקיף בארץ - מהבסיס עד לפרטים הכי קטנים</span>
+            <span className={styles.highlighted}>הקורס הדיגיטלי המקיף בארץ - מהבסיס עד לפרטים הכי קטנים </span>
           </p>
         </div>
 

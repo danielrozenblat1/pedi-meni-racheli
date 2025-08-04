@@ -25,7 +25,7 @@ const FirstScreen = () => {
           <h1 className={styles.mainTitle}>
             הדרך להפוך למומחית מיקרובליידינג{' '}
             <span className={styles.highlighted}>שבטוחה בעצמה</span>{' '}
-            ולהפוך את התשוקה לקריירה רווחית
+      ולעשות לך סדר מההתחלה ועד הסוף בלי לעבור ממקום ממקום
           </h1>
           <p className={styles.subtitle}>
             <span className={styles.highlighted}>ללא צורך בידע מקדים</span>

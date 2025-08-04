@@ -112,7 +112,7 @@ const EyebrowSyllabus = () => {
               </div>
               <div className={styles.infoContent}>
                 <h3 className={styles.infoTitle}>משך הקורס</h3>
-                <p className={styles.infoText}>50 שעות אקדמיות</p>
+                <p className={styles.infoText}>30+ פרקים</p>
               </div>
             </div>
             

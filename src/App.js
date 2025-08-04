@@ -27,7 +27,7 @@ function App() {
 <Certificates/>
 <Shorts/>
 <ThirdScreen/>
-<FifthScreen/>
+{/* <FifthScreen/> */}
 <Fit/>
 <SixthScreen/>
 <ForthScreen/>
