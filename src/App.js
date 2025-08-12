@@ -16,6 +16,7 @@ import ForthScreen from './screens/ForthScreen';
 import ByMe from './components/ByMe/ByMe';
 import FifthScreen from './screens/FifthScreen';
 import SixthScreen from './screens/SixthScreen';
+import SeventhScreen from './screens/SeventhScreen';
 function App() {
   return <>
   <div style={{overflowX:"hidden"}}>
@@ -30,6 +31,7 @@ function App() {
 {/* <FifthScreen/> */}
 <Fit/>
 <SixthScreen/>
+<SeventhScreen/>
 <ForthScreen/>
 
 </div>

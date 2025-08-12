@@ -84,7 +84,7 @@ const Fit = () => {
   return <>
     <div className={styles.container}>
       <div className={styles.glassCard}>
-        <h1 className={styles.mainTitle}>״ואיך אני אדע אם הקורס מתאים לי?״</h1>
+        <h1 className={styles.mainTitle}>״איך אני אדע אם הקורס מתאים לי?״</h1>
         
         <div className={styles.columnsContainer}>
           <div className={styles.column}>

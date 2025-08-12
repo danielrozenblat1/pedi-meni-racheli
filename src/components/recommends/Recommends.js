@@ -6,13 +6,16 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 // Import your images
-import result1 from "../../images/סוזנה פנחסי לקוחה ממליצה 1.png";
-import result2 from "../../images/סוזנה פנחסי לקוחה ממליצה 2.png";
-import result3 from "../../images/סוזנה פנחסי לקוחה ממליצה 3.png";
-
+import result1 from "../../images/פדי מני רחלי המלצות 1.png";
+import result2 from "../../images/פדי מני רחלי המלצות 2.png";
+import result3 from "../../images/פדי מני רחלי המלצות 3.png";
+import result4 from "../../images/פדי מני רחלי המלצות 4.png";
+import result5 from "../../images/פדי מני רחלי המלצות 5.png";
+import result6 from "../../images/פדי מני רחלי המלצות 6.png";
+import result7 from "../../images/פדי מני רחלי המלצות 7.png";
 const Recommendations = () => {
   const images = [
-    result1, result2, result3
+    result1, result2, result3,result4, result5, result6, result7
   ];
 
   const sliderSettings = {
@@ -23,7 +26,7 @@ const Recommendations = () => {
     autoplay: true,
     pauseOnHover: true,
     slidesToShow: window.innerWidth < 450 ? 1 :
-                  window.innerWidth <= 1050 ? 2 : 3,
+                  window.innerWidth <= 1050 ? 2 : 4,
     slidesToScroll: 1,
   };
 
@@ -34,7 +37,7 @@ const Recommendations = () => {
 
   return (
     <>
-      <div className={styles.title}>תשמעי מאלו שעשו את הצעד!</div>
+     
       <div className={styles.explain}>
         תחליקי בין התמונות
       </div>
@@ -55,7 +58,7 @@ const Recommendations = () => {
           ))}
         </Slider>
       </div>
-      <Button text="סוזנה, בואי נדבר!" />
+
     </>
   );
 };

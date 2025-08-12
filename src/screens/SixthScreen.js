@@ -16,6 +16,17 @@ const SixthScreen = () => (
         ></iframe>
       </div>
     </div>
+    <div className={styles.videoPlayer}>
+      <iframe
+        className={styles.instagramReel}
+        src="https://www.instagram.com/p/C7mHmLzoOFW/embed"
+        title="Instagram Reel"
+        frameBorder="0"
+        scrolling="no"
+        allowtransparency="true"
+        allow="encrypted-media"
+      ></iframe>
+    </div>
   </>
 )
 

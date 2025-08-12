@@ -101,6 +101,38 @@
   filter: blur(1px);
 }
 
+/* Video Container Styles */
+.videoContainer {
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+    max-width: 400px;
+    width: 60%;
+    position: relative;
+}
+
+.video {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.video:hover {
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+    transform: translateY(-2px);
+}
+
+/* Play button overlay for paused video */
+
+
+.video:not([data-playing="true"]):hover + .videoContainer::before,
+.videoContainer:hover::before {
+    opacity: 1;
+}
+
 /* אנימציות */
 @keyframes drawLine {
   0% {
@@ -162,6 +194,21 @@
         padding: 0 0.5rem;
         margin: 0.8rem auto 0.8rem;
     }
+    
+    .videoContainer {
+        width: 65%;
+        margin: 20px auto;
+    }
+    
+    .video {
+        border-radius: 8px;
+    }
+    
+    .videoContainer::before {
+        font-size: 2.5rem;
+        width: 60px;
+        height: 60px;
+    }
 }
 
 /* 350-450px */
@@ -183,6 +230,21 @@
         max-width: 94%;
         padding: 0 0.7rem;
         margin: 0.9rem auto 0.9rem;
+    }
+    
+    .videoContainer {
+        width: 63%;
+        margin: 22px auto;
+    }
+    
+    .video {
+        border-radius: 8px;
+    }
+    
+    .videoContainer::before {
+        font-size: 3rem;
+        width: 65px;
+        height: 65px;
     }
 }
 
@@ -206,6 +268,21 @@
         padding: 0 0.8rem;
         margin: 0.95rem auto 0.95rem;
     }
+    
+    .videoContainer {
+        width: 61%;
+        margin: 25px auto;
+    }
+    
+    .video {
+        border-radius: 10px;
+    }
+    
+    .videoContainer::before {
+        font-size: 3.5rem;
+        width: 70px;
+        height: 70px;
+    }
 }
 
 /* 550-650px */
@@ -228,6 +305,21 @@
         padding: 0 0.9rem;
         margin: 1rem auto 1rem;
     }
+    
+    .videoContainer {
+        width: 60%;
+        margin: 27px auto;
+    }
+    
+    .video {
+        border-radius: 10px;
+    }
+    
+    .videoContainer::before {
+        font-size: 3.8rem;
+        width: 75px;
+        height: 75px;
+    }
 }
 
 /* 650-750px */
@@ -249,5 +341,20 @@
         max-width: 91%;
         padding: 0 1rem;
         margin: 1rem auto 1rem;
+    }
+    
+    .videoContainer {
+        width: 59%;
+        margin: 28px auto;
+    }
+    
+    .video {
+        border-radius: 12px;
+    }
+    
+    .videoContainer::before {
+        font-size: 4rem;
+        width: 80px;
+        height: 80px;
     }
 }
