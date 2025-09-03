@@ -229,8 +229,9 @@ const EyebrowSyllabus = () => {
                   </div>
                 ))}
               </div>
-              <Button text="רחלי אני רוצה את הקורס!"/>
+          
             </div>
+                <Button text="רחלי אני רוצה את הקורס!"/>
           </div>
         </div>
       </div>

@@ -6,7 +6,7 @@ import secure from "../icons/wired-outline-25-error-cross-hover-loading.json"
 import { BenefitsContainer } from "../components/benefitsHistalmut/BenefitHishtalmut"
 const SecondScreen=()=><>
     <div className={styles.title}>לא הגעת לכאן סתם</div>
-    <div className={styles.description}>את כאן כי התחלת עם <strong> ברק בעיניים </strong> , רצית להצליח - אבל עם הזמן הגיעו הספקות והחוסר בטחון. הקורס לא נתן לך את המעטפת שציפית שתקבלי, הביטחון לא נבנה ומאז את עוברת ממקום למקום כדי לנסות לתקן את הפערים שקיימים. </div>
+    <div className={styles.description}>את כאן כי התחלת עם <strong> ברק בעיניים </strong> , רצית להצליח - אבל עם הזמן הגיעו הספקות והחוסר בטחון ואז.. קרה מה שקרה,  הביטחון לא נבנה ואולי להפך - ירד.. </div>
  <div className={styles.title}>ואת מרגישה ש</div>
     <div className={styles.row}>
         <IconTextComponent text="הטכניקה שלך עדיין לא טובה מספיק כדי שישלמו לך" icon={needle} />
