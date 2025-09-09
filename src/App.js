@@ -17,6 +17,7 @@ import ByMe from './components/ByMe/ByMe';
 import FifthScreen from './screens/FifthScreen';
 import SixthScreen from './screens/SixthScreen';
 import SeventhScreen from './screens/SeventhScreen';
+import PrivacyPolicy from './components/privacy/Privacy';
 function App() {
   return <>
   <div style={{overflowX:"hidden"}}>
@@ -33,7 +34,11 @@ function App() {
 <SixthScreen/>
 <SeventhScreen/>
 <ForthScreen/>
-
+   <PrivacyPolicy 
+                      ownerName="רחלי לוי" 
+                      email="rachelilevy.beauty@gmail.com" 
+                      domain="https://pedimeniracheli.co.il/" 
+                    />
 </div>
   </>
 }
