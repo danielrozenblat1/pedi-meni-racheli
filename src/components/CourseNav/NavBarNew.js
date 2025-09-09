@@ -3,6 +3,7 @@ import { Link as ScrollLink } from "react-scroll";
 import styles from './NavBarNew.module.css';
 import logo from "../../images/רחלי מני פדי אייקון.png"
 import { FaTimes } from 'react-icons/fa';
+import PrivacyPolicy from '../privacy/Privacy';
 
 const NavBarNew = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,6 +21,9 @@ const NavBarNew = () => {
   // State for form submission status
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  
+  // הוסף state עבור מדיניות הפרטיות
+  const [agreed, setAgreed] = useState(false);
 
   // Refs for form fields
   const fullNameRef = useRef(null);
@@ -77,7 +81,14 @@ const NavBarNew = () => {
         phone: '',
         reason: ''
       });
+      setAgreed(false); // איפוס גם לתיבת האישור
     }
+  };
+
+  // הוסף פונקציה לטיפול בקליק על מדיניות הפרטיות
+  const handlePrivacyClick = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
   };
 
   // Handle form submission
@@ -87,6 +98,12 @@ const NavBarNew = () => {
     const name = fullNameRef.current.value;
     const phone = phoneRef.current.value;
     const reason = reasonRef.current.value;
+    
+    // בדיקת אישור מדיניות הפרטיות
+    if (!agreed) {
+      alert("עליך לאשר את תנאי השימוש ומדיניות הפרטיות");
+      return;
+    }
     
     // Validate inputs
     let valid = true;
@@ -166,6 +183,7 @@ const NavBarNew = () => {
             phone: '',
             reason: ''
           });
+          setAgreed(false); // איפוס גם לתיבת האישור
           closeForm();
         }, 3000);
       } else {
@@ -220,7 +238,6 @@ const NavBarNew = () => {
         <div className={styles.formOverlay} onClick={closeForm}>
           <div className={styles.formModal} onClick={(e) => e.stopPropagation()}>
             <div className={styles.formHeader}>
-          
               <button className={styles.formCloseButton} onClick={closeForm}>
                 <FaTimes />
               </button>
@@ -267,6 +284,42 @@ const NavBarNew = () => {
                   ref={reasonRef}
                 />
                 {errors.reason && <p className={styles.errorText}>{errors.reason}</p>}
+              </div>
+              
+              {/* תיבת האישור למדיניות הפרטיות */}
+              <div style={{ 
+                display: "flex", 
+                justifyContent: "center", 
+                marginTop: "20px",
+                marginBottom: "20px"
+              }}>
+                <label style={{ 
+                  direction: "rtl", 
+                  fontFamily: "AssistantR", 
+                  fontSize: "0.9rem", 
+                  textAlign: "right", 
+                  display: "flex", 
+                  alignItems: "center", 
+                  flexWrap: "wrap", 
+                  gap: "5px" 
+                }}>
+                  <input
+                    type="checkbox"
+                    checked={agreed}
+                    onChange={() => setAgreed(!agreed)}
+                    style={{ marginLeft: "10px" }}
+                    disabled={isSubmitting || submitted}
+                  />
+                  קראתי את
+                  <span onClick={handlePrivacyClick}>
+                    <PrivacyPolicy 
+                      ownerName="רחלי לוי" 
+                      email="rachelilevy.beauty@gmail.com" 
+                      domain="https://pedimeniracheli.co.il/" 
+                    />
+                  </span>
+                  ואני מאשר/ת
+                </label>
               </div>
               
               <button 

@@ -106,6 +106,7 @@ const NewFirstScreen = () => {
           </h1>
           <p className={styles.subtitle}>
             <span className={styles.highlighted}>הקורס הדיגיטלי המקיף בארץ - מהבסיס עד לפרטים הכי קטנים </span>
+               <span className={styles.highlighted}>*יש אופציה לשלב לימוד פרונטלי*</span>
           </p>
         </div>
 

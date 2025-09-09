@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { FaTimes } from 'react-icons/fa';
 import styles from "./Button.module.css";
+import PrivacyPolicy from '../privacy/Privacy';
 
 const Button = (props) => {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -15,6 +16,9 @@ const Button = (props) => {
   // State for form submission status
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  
+  // הוסף state עבור מדיניות הפרטיות
+  const [agreed, setAgreed] = useState(false);
 
   // Refs for form fields
   const fullNameRef = useRef(null);
@@ -43,7 +47,14 @@ const Button = (props) => {
         phone: '',
         reason: ''
       });
+      setAgreed(false); // איפוס גם לתיבת האישור
     }
+  };
+
+  // הוסף פונקציה לטיפול בקליק על מדיניות הפרטיות
+  const handlePrivacyClick = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
   };
 
   // Handle form submission
@@ -53,6 +64,12 @@ const Button = (props) => {
     const name = fullNameRef.current.value;
     const phone = phoneRef.current.value;
     const reason = reasonRef.current.value;
+    
+    // בדיקת אישור מדיניות הפרטיות
+    if (!agreed) {
+      alert("עליך לאשר את תנאי השימוש ומדיניות הפרטיות");
+      return;
+    }
     
     // Validate inputs
     let valid = true;
@@ -132,6 +149,7 @@ const Button = (props) => {
             phone: '',
             reason: ''
           });
+          setAgreed(false); // איפוס גם לתיבת האישור
           closeForm();
         }, 3000);
       } else {
@@ -206,6 +224,43 @@ const Button = (props) => {
                   ref={reasonRef}
                 />
                 {errors.reason && <p className={styles.errorText}>{errors.reason}</p>}
+              </div>
+              
+              {/* תיבת האישור למדיניות הפרטיות */}
+              <div style={{ 
+                display: "flex", 
+                justifyContent: "center", 
+                marginTop: "20px",
+                marginBottom: "20px"
+              }}>
+                <label style={{ 
+                  direction: "rtl", 
+                  fontFamily: "AssistantR", 
+                  fontSize: "0.9rem", 
+                  textAlign: "right", 
+                  display: "flex", 
+                  alignItems: "center", 
+                  flexWrap: "wrap", 
+                  gap: "5px" 
+                }}>
+                  <input
+                    type="checkbox"
+                    checked={agreed}
+                    onChange={() => setAgreed(!agreed)}
+                    style={{ marginLeft: "10px" }}
+                    disabled={isSubmitting || submitted}
+                  />
+                  קראתי את
+                  <span onClick={handlePrivacyClick}>
+                    <PrivacyPolicy 
+                      ownerName="רחלי לוי" 
+                      email="rachelilevy.beauty@gmail.com" 
+                
+                      domain="https://pedimeniracheli.co.il/" 
+                    />
+                  </span>
+                  ואני מאשר/ת
+                </label>
               </div>
               
               <button 
